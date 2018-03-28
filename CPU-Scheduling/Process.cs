@@ -14,6 +14,7 @@ namespace CPU_Scheduling
         public int arrivalTime { get; private set; }
         public int cpuBurst { get; private set; }
         public int remainingTime { get; private set; }
+        public int priority { get; private set; }
 
         public int waitingTime { get; set; }
         public int turnaroundTime { get; set; }
@@ -29,6 +30,11 @@ namespace CPU_Scheduling
             New(name, arrivalTime, cpuBurst);
             Ready();
         }
+        public Process(String name, int arrivalTime, int cpuBurst, int priority)
+        {
+            New(name, arrivalTime, cpuBurst, priority);
+            Ready();
+        }
 
         public void New(String name, int arrivalTime, int cpuBurst)
         {
@@ -39,6 +45,20 @@ namespace CPU_Scheduling
             this.name = name;
             this.arrivalTime = arrivalTime;
             this.cpuBurst = cpuBurst;
+
+            remainingTime = cpuBurst;
+            endTime = arrivalTime;
+        }
+        public void New(String name, int arrivalTime, int cpuBurst,int priority)
+        {
+            isReady = false;
+            isRunning = false;
+            isTerminated = false;
+
+            this.name = name;
+            this.arrivalTime = arrivalTime;
+            this.cpuBurst = cpuBurst;
+            this.priority = priority;
 
             remainingTime = cpuBurst;
             endTime = arrivalTime;

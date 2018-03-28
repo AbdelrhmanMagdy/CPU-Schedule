@@ -43,8 +43,13 @@ namespace CPU_Scheduling
                 String name = dataGridView1.Rows[i].Cells[0].Value.ToString();
                 int arrivalTime = Convert.ToInt32( dataGridView1.Rows[i].Cells[1].Value.ToString());
                 int cpuBurst = Convert.ToInt32( dataGridView1.Rows[i].Cells[2].Value.ToString());
-
-                processArray[i] = new Process(name, arrivalTime, cpuBurst);
+                int priority;
+                if (mode == 4 || mode == 5)
+                {
+                    priority = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                    processArray[i] = new Process(name, arrivalTime, cpuBurst, priority);
+                }
+                else processArray[i] = new Process(name, arrivalTime, cpuBurst);
             }
 
             SchedulingAlgorithm scheduler = new FirstComeFirstServed(processArray);
@@ -65,6 +70,14 @@ namespace CPU_Scheduling
                 case 3:
                     scheduler = new RoundRobin(processArray);
                     MessageBox.Show("RR");
+                    break;
+                case 4:
+                    scheduler = new PriorityNonPreemptive(processArray);
+                    MessageBox.Show("Priority Non-Preemptive");
+                    break;
+                case 5:
+                    scheduler = new PriorityPreemptive(processArray);
+                    MessageBox.Show("Priority Preemptive");
                     break;
             }
 
@@ -107,6 +120,18 @@ namespace CPU_Scheduling
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonPNP.Checked)
+                mode = 4;
+        }
+
+        private void radioButtonPP_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonPP.Checked)
+                mode = 5;
         }
     }
 }

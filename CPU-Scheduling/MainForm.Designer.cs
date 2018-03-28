@@ -44,6 +44,9 @@
             this.radioButtonSRTF = new System.Windows.Forms.RadioButton();
             this.radioButtonSTF = new System.Windows.Forms.RadioButton();
             this.radioButtonFCFS = new System.Windows.Forms.RadioButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioButtonPNP = new System.Windows.Forms.RadioButton();
+            this.radioButtonPP = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,7 +84,8 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.process_number,
             this.arrival_time,
-            this.cpu_burst});
+            this.cpu_burst,
+            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(316, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -166,6 +170,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.radioButtonPP);
+            this.groupBox2.Controls.Add(this.radioButtonPNP);
             this.groupBox2.Controls.Add(this.radioButtonRR);
             this.groupBox2.Controls.Add(this.buttonRun);
             this.groupBox2.Controls.Add(this.radioButtonSRTF);
@@ -239,6 +245,35 @@
             this.radioButtonFCFS.UseVisualStyleBackColor = true;
             this.radioButtonFCFS.CheckedChanged += new System.EventHandler(this.radioButtonFCFS_CheckedChanged);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Priority";
+            this.Column1.Name = "Column1";
+            // 
+            // radioButtonPNP
+            // 
+            this.radioButtonPNP.AutoSize = true;
+            this.radioButtonPNP.Location = new System.Drawing.Point(6, 119);
+            this.radioButtonPNP.Name = "radioButtonPNP";
+            this.radioButtonPNP.Size = new System.Drawing.Size(182, 19);
+            this.radioButtonPNP.TabIndex = 17;
+            this.radioButtonPNP.TabStop = true;
+            this.radioButtonPNP.Text = "Priority Non Preemptive";
+            this.radioButtonPNP.UseVisualStyleBackColor = true;
+            this.radioButtonPNP.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButtonPP
+            // 
+            this.radioButtonPP.AutoSize = true;
+            this.radioButtonPP.Location = new System.Drawing.Point(6, 144);
+            this.radioButtonPP.Name = "radioButtonPP";
+            this.radioButtonPP.Size = new System.Drawing.Size(152, 19);
+            this.radioButtonPP.TabIndex = 17;
+            this.radioButtonPP.TabStop = true;
+            this.radioButtonPP.Text = "Priority Preemptive";
+            this.radioButtonPP.UseVisualStyleBackColor = true;
+            this.radioButtonPP.CheckedChanged += new System.EventHandler(this.radioButtonPP_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +312,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cpu_burst;
         private System.Windows.Forms.RadioButton radioButtonRR;
         private System.Windows.Forms.RadioButton radioButtonSRTF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.RadioButton radioButtonPP;
+        private System.Windows.Forms.RadioButton radioButtonPNP;
     }
 }
 
