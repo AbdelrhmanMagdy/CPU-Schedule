@@ -36,61 +36,66 @@ namespace CPU_Scheduling
 
         private void buttonRun_Click(object sender, EventArgs e)
         {
-            int length = dataGridView1.Rows.Count;
-            Process[] processArray = new Process[length];
-            for(int i = 0; i < length; i ++)
+            String name;
+            int arrivalTime, cpuBurst;
+            if (checking())
             {
-                String name = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                int arrivalTime = Convert.ToInt32( dataGridView1.Rows[i].Cells[1].Value.ToString());
-                int cpuBurst = Convert.ToInt32( dataGridView1.Rows[i].Cells[2].Value.ToString());
-                int priority;
-                if (mode == 4 || mode == 5)
+                int length = dataGridView1.Rows.Count;
+                Process[] processArray = new Process[length];
+                for (int i = 0; i < length; i++)
                 {
-                    priority = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value.ToString());
-                    processArray[i] = new Process(name, arrivalTime, cpuBurst, priority);
+                    name = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    arrivalTime = Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    cpuBurst = Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                    int priority;
+                    if (mode == 4 || mode == 5)
+                    {
+                        priority = Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        processArray[i] = new Process(name, arrivalTime, cpuBurst, priority);
+                    }
+                    else processArray[i] = new Process(name, arrivalTime, cpuBurst);
                 }
-                else processArray[i] = new Process(name, arrivalTime, cpuBurst);
+
+                SchedulingAlgorithm scheduler = new FirstComeFirstServed(processArray);
+                switch (mode)
+                {
+                    case 0:
+                        scheduler = new FirstComeFirstServed(processArray);
+                        MessageBox.Show("FCFS");
+                        break;
+                    case 1:
+                        scheduler = new ShortestTimeFirst(processArray);
+                        MessageBox.Show("STF");
+                        break;
+                    case 2:
+                        scheduler = new ShortestRemainingTimeFirst(processArray);
+                        MessageBox.Show("SRTF");
+                        break;
+                    case 3:
+                        scheduler = new RoundRobin(processArray);
+                        MessageBox.Show("RR");
+                        break;
+                    case 4:
+                        scheduler = new PriorityNonPreemptive(processArray);
+                        MessageBox.Show("Priority Non-Preemptive");
+                        break;
+                    case 5:
+                        scheduler = new PriorityPreemptive(processArray);
+                        MessageBox.Show("Priority Preemptive");
+                        break;
+                }
+
+                scheduler.Run();
+                DataTable processData = scheduler.GetProcessData();
+                DataTable eventData = scheduler.GetEventData();
+
+                this.Hide();
+
+                ProcessResultForm prf = new ProcessResultForm(processData, eventData);
+                prf.ShowDialog();
+
+                this.Show();
             }
-
-            SchedulingAlgorithm scheduler = new FirstComeFirstServed(processArray);
-            switch (mode)
-            {
-                case 0:
-                    scheduler = new FirstComeFirstServed(processArray);
-                    MessageBox.Show("FCFS");
-                    break;
-                case 1:
-                    scheduler = new ShortestTimeFirst(processArray);
-                    MessageBox.Show("STF");
-                    break;
-                case 2:
-                    scheduler = new ShortestRemainingTimeFirst(processArray);
-                    MessageBox.Show("SRTF");
-                    break;
-                case 3:
-                    scheduler = new RoundRobin(processArray);
-                    MessageBox.Show("RR");
-                    break;
-                case 4:
-                    scheduler = new PriorityNonPreemptive(processArray);
-                    MessageBox.Show("Priority Non-Preemptive");
-                    break;
-                case 5:
-                    scheduler = new PriorityPreemptive(processArray);
-                    MessageBox.Show("Priority Preemptive");
-                    break;
-            }
-
-            scheduler.Run();
-            DataTable processData = scheduler.GetProcessData();
-            DataTable eventData = scheduler.GetEventData();
-
-            this.Hide();
-
-            ProcessResultForm prf = new ProcessResultForm(processData, eventData);
-            prf.ShowDialog();
-
-            this.Show();
         }
 
         private void radioButtonFCFS_CheckedChanged(object sender, EventArgs e)
@@ -147,6 +152,29 @@ namespace CPU_Scheduling
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        public bool checking()
+        {
+            int length = dataGridView1.Rows.Count;
+            int check = 1;
+            for (int i = 0; i < length; i++)
+            {
+                if ((mode == 4 || mode == 5) && dataGridView1.Rows[i].Cells[3].Value == null /* && string.IsNullOrEmpty(dataGridView1.Rows[i].Cells[3].Value.ToString())*/)
+                {
+                    check = 0;
+                    MessageBox.Show("Please Enter Priority");
+                    break;
+                }
+                else if (dataGridView1.Rows[i].Cells[1].Value == null || dataGridView1.Rows[i].Cells[2].Value == null)
+                {
+                    check = 0;
+                    MessageBox.Show("Please check on your inputs");
+                    break;
+                }
+            }
+
+            if (check == 1) return true;
+            else return false;
         }
     }
 }

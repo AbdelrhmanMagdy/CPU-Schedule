@@ -40,3 +40,19 @@ C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Sch
 C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Scheduling.ProcessResultForm.resources
 C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Scheduling.Properties.Resources.resources
 C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU-Scheduling.csproj.GenerateResource.Cache
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\CPU-Scheduling.exe.config
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU-Scheduling.exe
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU-Scheduling.pdb
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\CPU-Scheduling.exe
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\CPU-Scheduling.pdb
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\mscorlib.dll
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\normidna.nlp
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\normnfc.nlp
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\normnfd.nlp
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\normnfkc.nlp
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\bin\Debug\normnfkd.nlp
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU-Scheduling.csprojResolveAssemblyReference.cache
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU_Scheduling.MainForm.resources
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU_Scheduling.ProcessResultForm.resources
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU_Scheduling.Properties.Resources.resources
+C:\Users\dell user\Desktop\githubbb\CPU-Schedule\CPU-Scheduling\obj\Debug\CPU-Scheduling.csproj.GenerateResource.Cache
