@@ -30,3 +30,13 @@ C:\Users\dell user\Desktop\New folder\CPU-Scheduling-development\CPU-Scheduling\
 C:\Users\dell user\Desktop\New folder\CPU-Scheduling-development\CPU-Scheduling\obj\Debug\CPU_Scheduling.ProcessResultForm.resources
 C:\Users\dell user\Desktop\New folder\CPU-Scheduling-development\CPU-Scheduling\obj\Debug\CPU_Scheduling.Properties.Resources.resources
 C:\Users\dell user\Desktop\New folder\CPU-Scheduling-development\CPU-Scheduling\obj\Debug\CPU-Scheduling.csproj.GenerateResource.Cache
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\bin\Debug\CPU-Scheduling.exe.config
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU-Scheduling.exe
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU-Scheduling.pdb
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\bin\Debug\CPU-Scheduling.exe
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\bin\Debug\CPU-Scheduling.pdb
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU-Scheduling.csprojResolveAssemblyReference.cache
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Scheduling.MainForm.resources
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Scheduling.ProcessResultForm.resources
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU_Scheduling.Properties.Resources.resources
+C:\Users\abdelrhmanmagdy\Desktop\CPU-Scheduling\CPU-Scheduling\obj\Debug\CPU-Scheduling.csproj.GenerateResource.Cache

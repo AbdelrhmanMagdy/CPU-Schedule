@@ -87,9 +87,9 @@ namespace CPU_Scheduling
                 {
                     ProcessRun();
                     time++;
-                    
                     CheckForTermination();
                     CheckForPreemptiveSwap();
+                
                 }
                 else
                 {

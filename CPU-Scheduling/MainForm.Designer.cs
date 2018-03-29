@@ -28,25 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.process_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.arrival_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpu_burst = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonPP = new System.Windows.Forms.RadioButton();
+            this.radioButtonPNP = new System.Windows.Forms.RadioButton();
             this.radioButtonRR = new System.Windows.Forms.RadioButton();
             this.buttonRun = new System.Windows.Forms.Button();
             this.radioButtonSRTF = new System.Windows.Forms.RadioButton();
             this.radioButtonSTF = new System.Windows.Forms.RadioButton();
             this.radioButtonFCFS = new System.Windows.Forms.RadioButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radioButtonPNP = new System.Windows.Forms.RadioButton();
-            this.radioButtonPP = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,20 +83,63 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.process_number,
             this.arrival_time,
             this.cpu_burst,
             this.Column1});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(316, 89);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.Size = new System.Drawing.Size(428, 344);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // process_number
             // 
@@ -98,7 +147,6 @@
             this.process_number.FillWeight = 4F;
             this.process_number.HeaderText = "Process Number";
             this.process_number.Name = "process_number";
-            this.process_number.ReadOnly = true;
             // 
             // arrival_time
             // 
@@ -114,15 +162,21 @@
             this.cpu_burst.HeaderText = "CPU Burst";
             this.cpu_burst.Name = "cpu_burst";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Priority";
+            this.Column1.Name = "Column1";
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 24);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(272, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 31);
+            this.label1.Size = new System.Drawing.Size(322, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "CPU SCHEDULING";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -130,32 +184,41 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonInsert);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Lime;
             this.groupBox1.Location = new System.Drawing.Point(30, 88);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(251, 114);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter No. Of Process";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // buttonInsert
             // 
             this.buttonInsert.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInsert.BackColor = System.Drawing.Color.Transparent;
+            this.buttonInsert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInsert.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonInsert.FlatAppearance.BorderSize = 0;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(100, 64);
+            this.buttonInsert.ForeColor = System.Drawing.Color.Black;
+            this.buttonInsert.Location = new System.Drawing.Point(90, 68);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(59, 23);
+            this.buttonInsert.Size = new System.Drawing.Size(68, 31);
             this.buttonInsert.TabIndex = 3;
             this.buttonInsert.Text = "Insert";
-            this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -170,6 +233,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.radioButtonPP);
             this.groupBox2.Controls.Add(this.radioButtonPNP);
             this.groupBox2.Controls.Add(this.radioButtonRR);
@@ -178,12 +242,38 @@
             this.groupBox2.Controls.Add(this.radioButtonSTF);
             this.groupBox2.Controls.Add(this.radioButtonFCFS);
             this.groupBox2.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Lime;
             this.groupBox2.Location = new System.Drawing.Point(30, 226);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(251, 207);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Scheduling Algorithm";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // radioButtonPP
+            // 
+            this.radioButtonPP.AutoSize = true;
+            this.radioButtonPP.Location = new System.Drawing.Point(6, 144);
+            this.radioButtonPP.Name = "radioButtonPP";
+            this.radioButtonPP.Size = new System.Drawing.Size(152, 19);
+            this.radioButtonPP.TabIndex = 17;
+            this.radioButtonPP.TabStop = true;
+            this.radioButtonPP.Text = "Priority Preemptive";
+            this.radioButtonPP.UseVisualStyleBackColor = true;
+            this.radioButtonPP.CheckedChanged += new System.EventHandler(this.radioButtonPP_CheckedChanged);
+            // 
+            // radioButtonPNP
+            // 
+            this.radioButtonPNP.AutoSize = true;
+            this.radioButtonPNP.Location = new System.Drawing.Point(6, 119);
+            this.radioButtonPNP.Name = "radioButtonPNP";
+            this.radioButtonPNP.Size = new System.Drawing.Size(182, 19);
+            this.radioButtonPNP.TabIndex = 17;
+            this.radioButtonPNP.TabStop = true;
+            this.radioButtonPNP.Text = "Priority Non Preemptive";
+            this.radioButtonPNP.UseVisualStyleBackColor = true;
+            this.radioButtonPNP.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButtonRR
             // 
@@ -200,10 +290,12 @@
             // buttonRun
             // 
             this.buttonRun.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRun.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRun.Location = new System.Drawing.Point(110, 178);
+            this.buttonRun.ForeColor = System.Drawing.Color.Black;
+            this.buttonRun.Location = new System.Drawing.Point(80, 169);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(75, 23);
+            this.buttonRun.Size = new System.Drawing.Size(85, 32);
             this.buttonRun.TabIndex = 12;
             this.buttonRun.Text = "Run";
             this.buttonRun.UseVisualStyleBackColor = true;
@@ -244,35 +336,6 @@
             this.radioButtonFCFS.Text = "First Come First Served";
             this.radioButtonFCFS.UseVisualStyleBackColor = true;
             this.radioButtonFCFS.CheckedChanged += new System.EventHandler(this.radioButtonFCFS_CheckedChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Priority";
-            this.Column1.Name = "Column1";
-            // 
-            // radioButtonPNP
-            // 
-            this.radioButtonPNP.AutoSize = true;
-            this.radioButtonPNP.Location = new System.Drawing.Point(6, 119);
-            this.radioButtonPNP.Name = "radioButtonPNP";
-            this.radioButtonPNP.Size = new System.Drawing.Size(182, 19);
-            this.radioButtonPNP.TabIndex = 17;
-            this.radioButtonPNP.TabStop = true;
-            this.radioButtonPNP.Text = "Priority Non Preemptive";
-            this.radioButtonPNP.UseVisualStyleBackColor = true;
-            this.radioButtonPNP.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButtonPP
-            // 
-            this.radioButtonPP.AutoSize = true;
-            this.radioButtonPP.Location = new System.Drawing.Point(6, 144);
-            this.radioButtonPP.Name = "radioButtonPP";
-            this.radioButtonPP.Size = new System.Drawing.Size(152, 19);
-            this.radioButtonPP.TabIndex = 17;
-            this.radioButtonPP.TabStop = true;
-            this.radioButtonPP.Text = "Priority Preemptive";
-            this.radioButtonPP.UseVisualStyleBackColor = true;
-            this.radioButtonPP.CheckedChanged += new System.EventHandler(this.radioButtonPP_CheckedChanged);
             // 
             // MainForm
             // 

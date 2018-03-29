@@ -14,6 +14,7 @@ namespace CPU_Scheduling
     {
         private DataTable eventData;
         private DataTable processData;
+        private float AvgWTime;
         public ProcessResultForm()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace CPU_Scheduling
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Brush main = new SolidBrush(Color.White);
-            Pen border = new Pen(Color.Black);
+            Pen border = new Pen(Color.White);
 
             //Main Bar
             e.Graphics.DrawRectangle(border, new Rectangle(16, 44, 751, 61));
@@ -56,7 +57,7 @@ namespace CPU_Scheduling
                 int endTime = Convert.ToInt32(row["End Time"].ToString());
                 String processName = row["Process Number"].ToString();
                 int processNumber = Convert.ToInt32(processName.Substring(7)) - 1;
-
+                
                 int xStart = (startTime * 750) / maxTime + 17;
                 int xEnd = (endTime * 750) /maxTime + 17;
                 e.Graphics.FillRectangle(processColor[processNumber], new Rectangle(xStart, 45, xEnd - xStart, 60));
@@ -64,7 +65,7 @@ namespace CPU_Scheduling
                 e.Graphics.DrawLine(border, new Point(xEnd, 44), new Point(xEnd, 105));
 
                 Font font = new Font("Arial", 9);
-                Brush text = new SolidBrush(Color.Black);
+                Brush text = new SolidBrush(Color.White);
 
                 float xStartF = xStart;
                 float xEndF = xEnd;
@@ -72,9 +73,30 @@ namespace CPU_Scheduling
                 e.Graphics.DrawString(endTime.ToString(), font, text, xEnd, 22f);
                 e.Graphics.DrawString(processName, font, text, (xStart + xEnd) / 2 - 10, 70f);
             }
+            foreach (DataRow row in processData.Rows)
+            {
+                this.AvgWTime += float.Parse(row["Waiting Time"].ToString());
+            }            
+            AvgWTime = AvgWTime / eventData.Rows.Count;
+            this.label4.Text = AvgWTime.ToString();
         }
 
         private void ProcessResultForm_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
