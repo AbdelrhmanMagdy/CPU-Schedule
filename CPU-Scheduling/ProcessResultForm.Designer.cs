@@ -33,10 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,29 +91,6 @@
             this.panel2.Size = new System.Drawing.Size(848, 50);
             this.panel2.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(670, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(638, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 22);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Avg wating time";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -138,6 +115,29 @@
             this.label2.Size = new System.Drawing.Size(189, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Process Result";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(659, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(638, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 22);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Avg wating time";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 

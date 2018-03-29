@@ -56,6 +56,7 @@ namespace CPU_Scheduling
                 int startTime = Convert.ToInt32(row["Start Time"].ToString());
                 int endTime = Convert.ToInt32(row["End Time"].ToString());
                 String processName = row["Process Number"].ToString();
+                String pName = row["Process Number"].ToString().Replace("rocess","");
                 int processNumber = Convert.ToInt32(processName.Substring(7)) - 1;
                 
                 int xStart = (startTime * 750) / maxTime + 17;
@@ -71,7 +72,7 @@ namespace CPU_Scheduling
                 float xEndF = xEnd;
                 e.Graphics.DrawString(startTime.ToString(), font, text, xStart, 22f);
                 e.Graphics.DrawString(endTime.ToString(), font, text, xEnd, 22f);
-                e.Graphics.DrawString(processName, font, text, (xStart + xEnd) / 2 - 10, 70f);
+                e.Graphics.DrawString(pName, font, text, (xStart + xEnd) / 2 - 10, 70f);
             }
             foreach (DataRow row in processData.Rows)
             {

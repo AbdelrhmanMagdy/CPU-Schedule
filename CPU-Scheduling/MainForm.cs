@@ -45,6 +45,8 @@ namespace CPU_Scheduling
                 for (int i = 0; i < length; i++)
                 {
                     name = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    if (dataGridView1.Rows[i].Cells[1].Value.ToString() == "") { MessageBox.Show("Please Fill the empty cells"); return; }
+                    if (dataGridView1.Rows[i].Cells[2].Value.ToString() == "") { MessageBox.Show("Please Fill the empty cells"); return; }
                     arrivalTime = Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value.ToString());
                     cpuBurst = Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value.ToString());
                     int priority;
