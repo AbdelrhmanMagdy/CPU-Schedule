@@ -11,9 +11,11 @@ namespace CPU_Scheduling
     {
         public int quantum { get; private set; }
         private int quantumTick;
+        private int quan;
 
-        public RoundRobin(Process[] processArray) : base(processArray)
+        public RoundRobin(int inQuan,Process[] processArray) : base(processArray)
         {
+            quan = inQuan;
             isPreemptive = true;
             quantumTick = 0;
             CalculateQuantum();
@@ -42,9 +44,11 @@ namespace CPU_Scheduling
             readyQueue.Enqueue(currentProcess, 1);
             quantumTick = 0;
         }
-
+        private void CalculateQuantum() {
+            quantum = quan;
+        }
         //Private Methods
-        private void CalculateQuantum()
+      /*  private void CalculateQuantum()
         {
             double average = 0;
             int count = processArray.Length;
@@ -57,7 +61,8 @@ namespace CPU_Scheduling
             average = average / count;
             average = average * 0.8;
             average = Math.Floor(average);
-            quantum = Convert.ToInt32(average);
+            quantum = 2; // Convert.ToInt32(average);
         }
+      */
     }
 }

@@ -53,6 +53,7 @@
             this.radioButtonSRTF = new System.Windows.Forms.RadioButton();
             this.radioButtonSTF = new System.Windows.Forms.RadioButton();
             this.radioButtonFCFS = new System.Windows.Forms.RadioButton();
+            this.quantamBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -234,6 +235,7 @@
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.quantamBox);
             this.groupBox2.Controls.Add(this.radioButtonPP);
             this.groupBox2.Controls.Add(this.radioButtonPNP);
             this.groupBox2.Controls.Add(this.radioButtonRR);
@@ -337,6 +339,13 @@
             this.radioButtonFCFS.UseVisualStyleBackColor = true;
             this.radioButtonFCFS.CheckedChanged += new System.EventHandler(this.radioButtonFCFS_CheckedChanged);
             // 
+            // quantamBox
+            // 
+            this.quantamBox.Location = new System.Drawing.Point(126, 93);
+            this.quantamBox.Name = "quantamBox";
+            this.quantamBox.Size = new System.Drawing.Size(100, 22);
+            this.quantamBox.TabIndex = 17;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +387,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.RadioButton radioButtonPP;
         private System.Windows.Forms.RadioButton radioButtonPNP;
+        private System.Windows.Forms.TextBox quantamBox;
     }
 }
 

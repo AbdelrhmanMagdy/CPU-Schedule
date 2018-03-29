@@ -17,6 +17,7 @@ namespace CPU_Scheduling
         public MainForm()
         {
             InitializeComponent();
+            quantamBox.Hide();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -63,27 +64,28 @@ namespace CPU_Scheduling
                 {
                     case 0:
                         scheduler = new FirstComeFirstServed(processArray);
-                        MessageBox.Show("FCFS");
+                        MessageBox.Show("FCFS Algorithm is selected!");
                         break;
                     case 1:
                         scheduler = new ShortestTimeFirst(processArray);
-                        MessageBox.Show("STF");
+                        MessageBox.Show("STF Algorithm is selected!");
                         break;
                     case 2:
                         scheduler = new ShortestRemainingTimeFirst(processArray);
-                        MessageBox.Show("SRTF");
+                        MessageBox.Show("SRTF Algorithm is selected!");
                         break;
                     case 3:
-                        scheduler = new RoundRobin(processArray);
-                        MessageBox.Show("RR");
+                        int quantam = Convert.ToInt32(quantamBox.Text);
+                        scheduler = new RoundRobin(quantam,processArray);
+                        MessageBox.Show("RR Algorithm is selected!");
                         break;
                     case 4:
                         scheduler = new PriorityNonPreemptive(processArray);
-                        MessageBox.Show("Priority Non-Preemptive");
+                        MessageBox.Show("Priority Non-Preemptive Algorithm is selected!");
                         break;
                     case 5:
                         scheduler = new PriorityPreemptive(processArray);
-                        MessageBox.Show("Priority Preemptive");
+                        MessageBox.Show("Priority Preemptive Algorithm is selected!");
                         break;
                 }
 
@@ -121,6 +123,7 @@ namespace CPU_Scheduling
         private void radioButtonRR_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonRR.Checked)
+                quantamBox.Show();
                 mode = 3;
         }
 
