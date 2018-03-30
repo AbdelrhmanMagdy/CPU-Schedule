@@ -21,7 +21,7 @@
 * Abdelrhman Magdy.
 * Youmna Mahmoud.
 ### Snap Shots:
-* [Click Here](https://www.google.com)
+* [Click Here](https://github.com/AbdelrhmanMagdy/CPU-Schedule/tree/master/screenshots)
 ### How To Run:
 * Open PU-Scheduling/bin/Debug/CPU-Scheduling.exe
 
