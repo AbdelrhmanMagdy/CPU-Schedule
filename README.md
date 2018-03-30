@@ -22,3 +22,9 @@
 * Youmna Mahmoud.
 ### Snap Shots:
 * [Click Here](https://www.google.com)
+### How To Run:
+* Open PU-Scheduling/bin/Debug/CPU-Scheduling.exe
+
+
+![SJF](https://github.com/AbdelrhmanMagdy/CPU-Schedule/blob/master/screenshots/SJF_preemptive_inputs.PNG?raw=true)
+![SJF](https://github.com/AbdelrhmanMagdy/CPU-Schedule/blob/master/screenshots/SJF_preemptive_results.PNG?raw=true)
