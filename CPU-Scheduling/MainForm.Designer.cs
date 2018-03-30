@@ -341,10 +341,11 @@
             // 
             // quantamBox
             // 
-            this.quantamBox.Location = new System.Drawing.Point(126, 93);
+            this.quantamBox.Location = new System.Drawing.Point(136, 94);
             this.quantamBox.Name = "quantamBox";
-            this.quantamBox.Size = new System.Drawing.Size(100, 22);
+            this.quantamBox.Size = new System.Drawing.Size(67, 22);
             this.quantamBox.TabIndex = 17;
+            this.quantamBox.Text = "Quantam";
             // 
             // MainForm
             // 
